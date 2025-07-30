@@ -569,6 +569,57 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// =============================================================================
+// FUNCIÓN DE DESCARGA
+// =============================================================================
+function handleDownload(event) {
+    event.preventDefault();
+    
+    // Mostrar notificación de descarga
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: var(--accent-primary);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        z-index: 10000;
+        font-size: 14px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+    `;
+    notification.textContent = '⬇️ Iniciando descarga...';
+    document.body.appendChild(notification);
+    
+    // Crear enlace temporal para descarga
+    const link = document.createElement('a');
+    link.href = 'downloads/Kontrol-1.0.0-completo.zip';
+    link.download = 'Kontrol-1.0.0-completo.zip';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    
+    // Ejecutar descarga
+    link.click();
+    
+    // Actualizar notificación
+    setTimeout(() => {
+        notification.textContent = '✅ Descarga iniciada correctamente';
+        notification.style.background = 'var(--accent-success)';
+    }, 500);
+    
+    // Remover notificación
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+            document.body.removeChild(link);
+        }, 300);
+    }, 3000);
+}
+
 // Consola de bienvenida para desarrolladores
 console.log(`
 %c

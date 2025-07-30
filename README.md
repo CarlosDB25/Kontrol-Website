@@ -1,53 +1,162 @@
-# 📊 Kontrol - Página Web del Sistema de Gestión de Inventario
+# 📊 Kontrol - Sitio Web Oficial
 
-> Página web oficial para la distribución de **Kontrol**, una aplicación de escritorio desarrollada con Electron para la gestión completa de inventarios, movimientos de productos y generación de reportes empresariales.
+> Sitio web de distribución para **Kontrol v1.0.0**, sistema completo de gestión de inventario desarrollado con Electron.
+
+## 🌐 Acceso al Sitio
+
+**🔗 [Visitar Kontrol Website](https://carlosdb25.github.io/Kontrol-Website/)**
 
 ## 📦 Sobre Kontrol
 
 **Kontrol** es una aplicación de escritorio desarrollada con **Electron** para pequeñas y medianas empresas que necesitan un control eficiente de su stock. Combina tecnologías modernas como Node.js, SQLite3 y jsPDF para ofrecer una experiencia completa en la gestión de inventarios.
 
-### 🛠️ Tecnologías
+### ✨ Características Principales
+- **📦 Gestión de Productos**: Registro completo con control de stock en tiempo real
+- **📊 Control de Movimientos**: Entradas, salidas y salidas grupales
+- **📈 Reportes y Análisis**: Reportes diarios, mensuales e historial por producto
+- **🖥️ Interfaz Moderna**: Diseño responsivo con Electron y efectos profesionales
+
+### 🛠️ Tecnologías del Sistema
 - **Electron**: Framework de aplicación de escritorio
 - **Node.js**: Runtime de JavaScript  
 - **SQLite3**: Base de datos local
 - **jsPDF**: Generación de reportes PDF
-- **HTML5 + CSS3**: Frontend responsivo
 
 ### 👨‍💻 Desarrollador
 **Carlos DB** - 2025
 
-## 🌟 Características de la WebPágina Web Oficial
-
-> Página web profesional para la distribución de Kontrol, la herramienta de productividad que combina funcionalidad avanzada con elegancia visual. Siguiendo la filosofía "Dark Modern Professional" y la paleta de colores oficial.
-
-## ✨ Sobre Kontrol
-
-**Kontrol** es más que una aplicación de productividad. Es la herramienta diseñada para profesionales que no comprometen entre belleza y funcionalidad. Con IA integrada, análisis avanzados y una interfaz que respeta tu sentido estético, Kontrol redefine lo que significa control total de la productividad.
-
-### 🎨 Filosofía: "Dark Modern Professional"
-- **Elegancia Oscura**: Tema dark que reduce fatiga visual
-- **Funcionalidad Intuitiva**: Cada elemento con propósito claro
-- **Productividad Centrada**: Diseño optimizado para eficiencia máxima
-
-## 🌟 Características de la Web
+## 🌟 Características del Sitio Web
 
 ### 🎨 Diseño y Estilo
-- **Tema Dark Modern Professional** inspirado en Google/Microsoft
-- **Paleta de colores oficial de Kontrol**
+- **Tema Dark Modern Professional** con paleta de colores corporativa
 - **Tipografía del sistema** (Segoe UI, SF Pro, Roboto)
 - **Responsive design** optimizado para todos los dispositivos
-- **Animaciones suaves** y transiciones profesionales
+- **Animaciones suaves** y navegación fluida personalizada
+- **Efectos visuales profesionales** con hover y transiciones
 
-### 🚀 Funcionalidades de la Web
-- **Hero section** con información clara sobre el sistema de inventario
-- **Mockup interactivo** que simula la interfaz real de gestión de productos
-- **Características detalladas** de gestión, movimientos, reportes e interfaz
-- **Descarga directa** del ejecutable portable para Windows
-- **Requisitos del sistema** claramente especificados
-- **Información del desarrollador** y canales de contacto
+### 🚀 Funcionalidades del Sitio
+- **Hero section** con efecto typewriter animado
+- **Mockup interactivo** que simula la interfaz real de Kontrol
+- **Grid de características** adaptativo (4 características principales)
+- **Sistema de descarga** con paquete completo (ejecutable + manual)
+- **Sección de manual** destacando la documentación incluida
+- **Información detallada** sobre requisitos y contenido
 
-### 🎯 Secciones Principales
+### 🎯 Secciones del Sitio
 1. **Hero** - "Sistema Completo de Gestión de Inventario"
+2. **Características** - Grid 2x2 con las funcionalidades principales
+3. **Descarga** - Paquete completo con manual de uso
+4. **Manual Info** - Destacando la documentación incluida
+5. **Acerca de** - Información técnica y estadísticas
+6. **Contacto** - Información del desarrollador
+
+## 📥 Descarga
+
+### 💾 Paquete Disponible
+- **Kontrol-1.0.0-completo.zip** (~90 MB)
+- ✅ Ejecutable portable (no requiere instalación)
+- ✅ Manual de uso completo paso a paso
+- ✅ Compatible con Windows 7/8/10/11 (64-bit)
+
+### 🖥️ Requisitos del Sistema
+- **Windows 7/8/10/11** (64-bit)
+- **2GB RAM** mínimo (4GB recomendado)
+- **90MB** de espacio libre
+- **Sin instalación** requerida
+
+## 🛠️ Desarrollo del Sitio Web
+
+### 📂 Estructura del Proyecto
+```
+Kontrol-Website/
+├── index.html              # Página principal
+├── styles/
+│   └── main.css            # Estilos principales con variables CSS
+├── scripts/
+│   ├── config.js           # Configuración y metadatos
+│   └── main.js             # Interactividad y animaciones
+├── assets/
+│   ├── img/                # Imágenes y logos
+│   └── logo.ico           # Favicon
+├── downloads/
+│   ├── Kontrol-1.0.0-completo.zip     # Paquete de descarga
+│   └── README USE MANUAL.md           # Manual de uso
+└── README.md              # Este archivo
+```
+
+### 🎨 Tecnologías del Sitio
+- **HTML5**: Estructura semántica y accesible
+- **CSS3**: Variables CSS, Grid, Flexbox, animaciones
+- **JavaScript ES6+**: Scroll suave, detección de secciones, animaciones
+- **GitHub Pages**: Hosting gratuito y confiable
+
+### ⚡ Características Técnicas
+- **Navegación suave personalizada** con easing cubic
+- **Offset dinámico** adaptativo según tamaño de pantalla
+- **Detección de sección activa** con indicadores visuales
+- **Animaciones de scroll** con Intersection Observer
+- **Efecto typewriter** en el título principal
+- **Sistema de variables CSS** para mantenimiento fácil
+
+## 🚀 Instalación y Uso
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/CarlosDB25/Kontrol-Website.git
+cd Kontrol-Website
+```
+
+### 2. Servir localmente
+```bash
+# Con Python
+python -m http.server 8000
+
+# Con Node.js (si tienes npx)
+npx serve .
+
+# Con Live Server (VS Code)
+# Clic derecho > "Open with Live Server"
+```
+
+### 3. Acceder al sitio
+```
+http://localhost:8000
+```
+
+## 📱 Responsive Design
+
+El sitio está optimizado para:
+- **Desktop**: Grid 4 columnas / 2x2 para características
+- **Tablet**: Grid 2 columnas adaptativo  
+- **Mobile**: Columna única con navegación móvil
+
+## 🎨 Paleta de Colores
+
+### Colores Principales
+- **Primary**: `#1a1d23` - Fondo principal
+- **Secondary**: `#252932` - Fondo secundario  
+- **Surface**: `#2d3139` - Superficies de tarjetas
+- **Accent Primary**: `#4dabf7` - Azul principal
+- **Accent Success**: `#51cf66` - Verde éxito
+- **Text Primary**: `#f8f9fa` - Texto principal
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
+
+## 📞 Contacto
+
+**Carlos DB**
+- GitHub: [@CarlosDB25](https://github.com/CarlosDB25)
+- Email: [Tu email]
+
+---
+
+**© 2025 Carlos DB - Kontrol Sistema de Gestión de Inventario**
 2. **Características** - Gestión de Productos, Control de Movimientos, Reportes y Análisis, Interfaz Moderna
 3. **Descarga** - Kontrol v1.0.0 Portable para Windows
 4. **Sobre Kontrol** - Información técnica y del desarrollador
