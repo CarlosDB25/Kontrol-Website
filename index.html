@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol - Sistema de Gestión de Inventario</title>
+    <meta name="description" content="Kontrol - Sistema completo de gestión de inventario desarrollado con Electron. Control de stock, movimientos de productos y reportes empresariales.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/img/icono.png" alt="Kontrol" class="logo-icon">
+                    <h1 class="logo-text">KONTROL</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#features" class="nav-link">Características</a></li>
+                    <li><a href="#download" class="nav-link">Descargar</a></li>
+                    <li><a href="#about" class="nav-link">Acerca de</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-part">Sistema Completo de </span>
+                    <span class="highlight">Gestión de Inventario</span>
+                </h1>
+                <p class="hero-description">
+                    Kontrol es una aplicación de escritorio desarrollada con Electron para la gestión completa de inventarios, control de stock y generación de reportes empresariales. Diseñada para pequeñas y medianas empresas.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Descargar Ahora
+                    </a>
+                    <a href="#features" class="btn btn-secondary">Ver Características</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="app-mockup">
+                    <div class="mockup-screen">
+                        <div class="mockup-header">
+                            <div class="mockup-controls">
+                                <span class="control error"></span>
+                                <span class="control warning"></span>
+                                <span class="control success"></span>
+                            </div>
+                            <div class="mockup-title">Kontrol - Sistema de Inventario</div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="inventory-header">
+                                <h4>Gestión de Productos</h4>
+                                <span class="inventory-count">15 productos</span>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-info">
+                                    <div class="product-image">📦</div>
+                                    <div class="product-details">
+                                        <span class="product-name">Laptop Dell Inspiron</span>
+                                        <span class="product-stock">Stock: 5 unidades</span>
+                                    </div>
+                                </div>
+                                <span class="product-status success">Activo</span>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-info">
+                                    <div class="product-image">🖱️</div>
+                                    <div class="product-details">
+                                        <span class="product-name">Mouse Logitech</span>
+                                        <span class="product-stock">Stock: 12 unidades</span>
+                                    </div>
+                                </div>
+                                <span class="product-status success">Activo</span>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-info">
+                                    <div class="product-image">⌨️</div>
+                                    <div class="product-details">
+                                        <span class="product-name">Teclado Mecánico</span>
+                                        <span class="product-stock low-stock">Stock: 2 unidades</span>
+                                    </div>
+                                </div>
+                                <span class="product-status warning">Stock Bajo</span>
+                            </div>
+                            <div class="summary-bar">
+                                <div class="summary-item">
+                                    <span class="summary-label">Total Stock</span>
+                                    <span class="summary-value">19</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Productos Activos</span>
+                                    <span class="summary-value">15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Características Principales</h2>
+                <p class="section-description">
+                    Control completo de inventario con tecnología Electron. Gestión profesional para tu negocio.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon primary">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 7h-9"></path>
+                            <path d="M14 17H5"></path>
+                            <circle cx="17" cy="17" r="3"></circle>
+                            <circle cx="7" cy="7" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Gestión de Productos</h3>
+                    <p class="feature-description">
+                        Registro completo de productos con miniaturas, control de stock en tiempo real, edición y eliminación. Sistema de productos activos/inactivos con alertas de stock mínimo.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon success">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            <path d="M12 11h4"></path>
+                            <path d="M12 16h4"></path>
+                            <path d="M8 11h.01"></path>
+                            <path d="M8 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Control de Movimientos</h3>
+                    <p class="feature-description">
+                        Registro de entradas y salidas, salidas grupales para múltiples productos, historial completo de movimientos con actualización automática de stock y manejo de precios.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon info">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Reportes y Análisis</h3>
+                    <p class="feature-description">
+                        Reportes diarios y mensuales, historial detallado por producto, indicadores clave empresariales y exportación a PDF con logo corporativo profesional.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon warning">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                            <line x1="7" y1="2" x2="7" y2="22"></line>
+                            <line x1="17" y1="2" x2="17" y2="22"></line>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <line x1="2" y1="7" x2="7" y2="7"></line>
+                            <line x1="2" y1="17" x2="7" y2="17"></line>
+                            <line x1="17" y1="17" x2="22" y2="17"></line>
+                            <line x1="17" y1="7" x2="22" y2="7"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Interfaz Moderna</h3>
+                    <p class="feature-description">
+                        Diseño responsivo con Electron, sistema de notificaciones integrado, navegación fluida entre módulos y marca minimalista con efectos visuales profesionales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="section-title">Descargar Kontrol v1.0.0</h2>
+                <p class="section-description">
+                    Paquete completo para Windows. Incluye aplicación portable + manual de uso detallado.
+                </p>
+                <div class="download-grid">
+                    <a href="downloads/Kontrol-1.0.0-completo.zip" download="Kontrol-1.0.0-completo.zip" class="download-card main-download">
+                        <div class="download-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="download-info">
+                            <h3>Paquete Completo</h3>
+                            <p>Para Windows 7/8/10/11 (64-bit)</p>
+                            <span class="download-size">~90 MB (ZIP)</span>
+                            <div class="download-features">
+                                <span>✅ Ejecutable portable</span>
+                                <span>✅ Manual de uso completo</span>
+                                <span>✅ Sin instalación</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="download-details">
+                    <h3>Contenido del Paquete</h3>
+                    <ul>
+                        <li><strong>Kontrol-1.0.0-portable.exe</strong> - Aplicación principal</li>
+                        <li><strong>Manual de Uso</strong> - Guía completa paso a paso</li>
+                    </ul>
+                </div>
+                <div class="system-requirements">
+                    <h3>Requisitos del Sistema</h3>
+                    <ul>
+                        <li><strong>Windows 7/8/10/11</strong> (64-bit)</li>
+                        <li><strong>2GB RAM</strong> mínimo (4GB recomendado)</li>
+                        <li><strong>90MB</strong> de espacio libre</li>
+                        <li><strong>Sin instalación requerida</strong></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manual Info Section -->
+    <section class="manual-info">
+        <div class="container">
+            <div class="manual-content">
+                <div class="manual-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <div class="manual-text">
+                    <h3>Manual de Uso Incluido</h3>
+                    <p>Tu descarga incluye una guía completa paso a paso con instrucciones detalladas para:</p>
+                    <div class="manual-features">
+                        <span>📝 Gestión de Productos</span>
+                        <span>📊 Registro de Movimientos</span>
+                        <span>📈 Generación de Reportes</span>
+                        <span>📋 Historial de Inventario</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Kontrol</h2>
+                    <p class="about-description">
+                        Kontrol es una aplicación de escritorio desarrollada con <strong>Electron</strong> para la gestión completa de inventarios, movimientos de productos y generación de reportes empresariales. Diseñada específicamente para pequeñas y medianas empresas que necesitan un control eficiente de su stock.
+                    </p>
+                    <p class="about-description">
+                        Desarrollado por <strong>Carlos DB</strong> en 2025, utiliza tecnologías modernas como Node.js, SQLite3 y jsPDF para ofrecer una experiencia completa y profesional en la gestión de inventarios.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">v1.0.0</span>
+                            <span class="stat-label">Versión Actual</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Electron</span>
+                            <span class="stat-label">Tecnología Base</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">SQLite</span>
+                            <span class="stat-label">Base de Datos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="feature-showcase">
+                        <div class="showcase-item">
+                            <div class="showcase-icon success">📦</div>
+                            <span>Gestión de Stock</span>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="showcase-icon primary">📊</div>
+                            <span>Reportes PDF</span>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="showcase-icon info">⚡</div>
+                            <span>Aplicación Electron</span>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="showcase-icon warning">🗄️</div>
+                            <span>Base SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Contacto y Soporte</h2>
+                <p class="section-description">
+                    ¿Necesitas ayuda con Kontrol? Contáctanos para soporte técnico o consultas.
+                </p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon primary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p>carlosdiazmaerio@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon success">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <p>@CarlosDB25</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon info">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Desarrollador</h3>
+                            <p>K - 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Kontrol</h3>
+                    <p class="footer-description">
+                        Sistema completo de gestión de inventario. Desarrollado con Electron para pequeñas y medianas empresas.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#download">Descargar</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="https://github.com/CarlosDB25/Kontrol/blob/main/README.md" target="_blank">Documentación</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Licencia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kontrol. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
