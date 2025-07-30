@@ -783,6 +783,25 @@ section {
     border: 1px solid var(--border-primary);
 }
 
+.download-note {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(77, 171, 247, 0.1);
+    border: 1px solid rgba(77, 171, 247, 0.3);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.download-note a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.download-note a:hover {
+    opacity: 0.8;
+}
+
 /* =============================================================================
    MANUAL INFO SECTION
    ============================================================================= */
