@@ -1,65 +1,104 @@
-## 📖 Guía de Uso
+# 🧾 Guía de Uso – Kontrol
 
-### **1. Gestión de Productos**
+¡Gracias por descargar **Kontrol**!  
+A continuación encontrarás una guía rápida para comenzar a usar el sistema de gestión de inventario.
 
-#### **Agregar Producto**
-1. Navegue a **Productos** desde el menú principal
-2. Haga clic en **"Agregar Producto"**
-3. Complete el formulario:
-   - **Nombre**: Nombre del producto (obligatorio)
-   - **Miniatura**: URL de imagen (opcional)
-4. Haga clic en **"Guardar"**
+---
 
-#### **Editar Producto**
-1. Localice el producto en la tabla
-2. Haga clic en el botón **"Editar"** (✏️)
-3. Modifique los campos necesarios
-4. Guarde los cambios
+## 📦 Inicio Rápido
 
-#### **Eliminar Producto**
-1. Localice el producto en la tabla
-2. Haga clic en el botón **"Eliminar"** (🗑️)
-3. Confirme la acción
+1. **Primera ejecucion de la aplicación** haciendo doble clic en el archivo: *Kontrol.exe*
 
-### **2. Registro de Movimientos**
+---
 
-#### **Entrada de Productos (Compras/Reposición)**
-1. Navegue a **Movimientos**
-2. Seleccione **"Entrada"**
-3. Complete el formulario:
-   - **Producto**: Seleccione de la lista o busque
-   - **Cantidad**: Unidades a agregar
-   - **Precio Unitario**: Costo por unidad
-   - **Descripción**: Motivo de la entrada
-4. Haga clic en **"Registrar Entrada"**
+## 🧰 1. Gestión de Productos
 
-#### **Salida de Productos (Ventas/Gastos)**
-1. Seleccione **"Salida"**
-2. Complete el formulario similar a entrada
-3. Para **salidas grupales**:
-   - Agregue múltiples productos
-   - Configure cantidades individuales
-   - Registre todo en una sola transacción
+### ➕ Agregar Producto
+1. Ve a la sección **Productos**.
+2. Haz clic en **"Agregar Producto"**.
+3. Completa:
+- **Nombre** (obligatorio)
+- **Miniatura** (URL de imagen, opcional)
+4. Presiona **"Guardar"**.
 
-### **3. Generación de Reportes**
+### 🛠️ Editar Producto
+1. En la tabla de productos, busca el que deseas modificar.
+2. Haz clic en el ícono ✏️.
+3. Cambia los datos necesarios.
+4. Guarda los cambios.
 
-#### **Reporte Diario**
-1. Navegue a **Reportes**
-2. En la pestaña **"Reporte Diario"**
-3. Seleccione la fecha deseada
-4. Haga clic en **"Generar Reporte"**
-5. Visualice métricas y tabla detallada
+### 🗑️ Eliminar Producto
+1. Ubica el producto en la lista.
+2. Presiona el botón 🗑️.
+3. Confirma la acción.
 
-#### **Reporte Mensual**
-1. Seleccione la pestaña **"Reporte Mensual"**
-2. Elija año y mes
-3. Genere el reporte para ver:
-   - Resumen mensual por producto
-   - Días con actividad
-   - Indicadores de rendimiento
+---
 
-#### **Historial de Producto**
-1. Seleccione **"Historial Producto"**
-2. Elija el producto específico
-3. Opcionalmente configure rango de fechas
-4. Visualice todos los movimientos del producto
+## 🔄 2. Registro de Movimientos
+
+### 📥 Entrada (Compras / Reposición)
+1. Ve a **Movimientos**.
+2. Selecciona **"Entrada"**.
+3. Rellena:
+- Producto
+- Cantidad
+- Precio Unitario (costo por unidad)
+- Descripción (motivo)
+4. Haz clic en **"Registrar Entrada"**.
+
+### 📤 Salida (Ventas / Gastos)
+1. Cambia a la pestaña **"Salida"**.
+2. Completa los campos igual que en la entrada.
+3. Para salidas múltiples:
+- Añade varios productos.
+- Configura cantidades.
+- Registra en una sola transacción.
+
+---
+
+## 📊 3. Reportes
+
+### 📅 Reporte Diario
+1. Dirígete a **Reportes > Diario**.
+2. Elige una fecha.
+3. Haz clic en **"Generar Reporte"**.
+4. Verás métricas generales y una tabla de movimientos del día.
+
+### 🗓️ Reporte Mensual
+1. Selecciona la pestaña **"Mensual"**.
+2. Elige año y mes.
+3. Revisa:
+- Resumen de movimientos por producto.
+- Días con actividad.
+- Indicadores de rendimiento mensual.
+
+### 🔍 Historial por Producto
+1. Ve a **Historial Producto**.
+2. Selecciona un producto.
+3. Opcional: ajusta el rango de fechas.
+4. Visualiza todos sus movimientos históricos.
+
+---
+
+## 📁 Archivos incluidos
+
+- `Kontrol.exe` → Ejecutable de la aplicación  
+- `Guía de Uso - Kontrol.pdf` → Este archivo de ayuda  
+
+---
+
+## 📌 Notas
+
+- La app es **portable**: no requiere instalación.  
+- Los datos creados (productos, movimientos, reportes) se guardan localmente en la misma carpeta donde ejecutes la app.  
+- Si necesitas moverla a otro equipo, asegúrate de llevar también los archivos de datos si ya habías trabajado con ella.
+
+---
+
+## 📮 Contacto y Soporte
+
+Para sugerencias o reportes de errores, puedes visitar el repositorio del proyecto en GitHub:  
+🔗 [github.com/CarlosDB25/Kontrol](https://github.com/CarlosDB25/Kontrol)
+
+---
+
