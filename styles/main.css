@@ -680,6 +680,8 @@ section {
     flex-direction: column;
     align-items: center;
     gap: var(--space-lg);
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .download-card:hover {
@@ -749,6 +751,11 @@ section {
     font-size: var(--text-xs);
     color: var(--accent-success);
     text-align: center;
+}
+
+/* Asegurar que los clics pasen al enlace padre */
+.download-card * {
+    pointer-events: none;
 }
 
 .system-requirements, .download-details {

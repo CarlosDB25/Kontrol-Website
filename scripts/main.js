@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initSmoothScrolling();
     initParallaxEffects();
+    initDownloadHandlers();
 });
 
 // =============================================================================
@@ -357,51 +358,8 @@ const debouncedScrollHandler = debounce(function() {
 window.addEventListener('scroll', debouncedScrollHandler);
 
 // =============================================================================
-// INTERACCIONES ESPECÍFICAS DE KONTROL
+// SISTEMA DE NOTIFICACIONES
 // =============================================================================
-
-// Simulación de descarga (para demo)
-function initDownloadButtons() {
-    const downloadCards = document.querySelectorAll('.download-card');
-    
-    downloadCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const platform = this.querySelector('h3').textContent;
-            
-            // Efecto visual de descarga
-            const originalContent = this.innerHTML;
-            this.innerHTML = `
-                <div class="download-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7,10 12,15 17,10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                </div>
-                <div class="download-info">
-                    <h3>Descargando...</h3>
-                    <p>Preparando Kontrol para ${platform}</p>
-                </div>
-            `;
-            
-            this.style.background = 'linear-gradient(135deg, #4285f4, #34a853)';
-            this.style.color = 'white';
-            
-            setTimeout(() => {
-                this.innerHTML = originalContent;
-                this.style.background = '';
-                this.style.color = '';
-                
-                // Mostrar mensaje de éxito
-                showNotification(`¡Kontrol para ${platform} se descargará pronto!`, 'success');
-            }, 2000);
-        });
-    });
-}
-
-// Sistema de notificaciones
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -457,11 +415,6 @@ function showNotification(message, type = 'info') {
         }
     }, 5000);
 }
-
-// Inicializar botones de descarga cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-    initDownloadButtons();
-});
 
 // =============================================================================
 // EFECTOS DE PERFORMANCE Y OPTIMIZACIÓN
@@ -532,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // =============================================================================
 function trackEvent(eventName, eventData) {
     // Placeholder para Google Analytics o similar
-    console.log('Event tracked:', eventName, eventData);
+    // console.log('Event tracked:', eventName, eventData);
 }
 
 // Tracking de interacciones importantes
@@ -572,52 +525,97 @@ document.addEventListener('keydown', function(e) {
 // =============================================================================
 // FUNCIÓN DE DESCARGA
 // =============================================================================
-function handleDownload(event) {
-    event.preventDefault();
+function initDownloadHandlers() {
+    const downloadLinks = document.querySelectorAll('a[download]');
     
-    // Mostrar notificación de descarga
+    downloadLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const fileName = this.getAttribute('download');
+            const href = this.getAttribute('href');
+            
+            // Mostrar notificación
+            showDownloadNotification(fileName);
+            
+            // Para servidores locales, forzar descarga
+            if (window.location.protocol === 'http:' && window.location.hostname === 'localhost') {
+                e.preventDefault();
+                forceDownload(href, fileName);
+            }
+        });
+    });
+}
+
+function showDownloadNotification(fileName) {
+    // Crear elemento de notificación
     const notification = document.createElement('div');
     notification.style.cssText = `
         position: fixed;
-        top: 100px;
+        top: 20px;
         right: 20px;
         background: var(--accent-primary);
         color: white;
         padding: 15px 20px;
         border-radius: 8px;
-        z-index: 10000;
-        font-size: 14px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        transition: all 0.3s ease;
+        z-index: 10000;
+        animation: slideIn 0.3s ease-out;
+        max-width: 300px;
+        font-size: 14px;
     `;
-    notification.textContent = '⬇️ Iniciando descarga...';
+    
+    notification.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7,10 12,15 17,10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <div>
+                <strong>Descargando...</strong><br>
+                <small>${fileName}</small>
+            </div>
+        </div>
+    `;
+    
+    // Agregar estilos de animación si no existen
+    if (!document.querySelector('#download-animation-styles')) {
+        const style = document.createElement('style');
+        style.id = 'download-animation-styles';
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
     document.body.appendChild(notification);
     
-    // Crear enlace temporal para descarga
+    // Remover después de 4 segundos
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease-in';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 4000);
+}
+
+function forceDownload(url, filename) {
+    // Crear un enlace temporal y hacer clic
     const link = document.createElement('a');
-    link.href = 'downloads/Kontrol-1.0.0-completo.zip';
-    link.download = 'Kontrol-1.0.0-completo.zip';
+    link.href = url;
+    link.download = filename;
     link.style.display = 'none';
     document.body.appendChild(link);
-    
-    // Ejecutar descarga
     link.click();
-    
-    // Actualizar notificación
-    setTimeout(() => {
-        notification.textContent = '✅ Descarga iniciada correctamente';
-        notification.style.background = 'var(--accent-success)';
-    }, 500);
-    
-    // Remover notificación
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-            document.body.removeChild(link);
-        }, 300);
-    }, 3000);
+    document.body.removeChild(link);
 }
 
 // Consola de bienvenida para desarrolladores
